@@ -33,19 +33,19 @@ and open the template in the editor.
 switch ($_POST['irany']) {
             case "elore":
                 var_dump("IRANY: elore");
-                var_dump(exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany']));
+                var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . "2>&1"));
                 break;
             case "balra":
                 var_dump("IRANY: balra");
-                var_dump(exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany']));
+                var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . "2>&1"));
                 break;
             case "jobbra":
                 var_dump("IRANY: jobbra");
-                var_dump(exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany']));
+                var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . "2>&1"));
                 break;
             case "hatra":
                 var_dump("IRANY: hatra");
-                var_dump(exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany']));
+                var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . "2>&1"));
                 break;
 
             default:
