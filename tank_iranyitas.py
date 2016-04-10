@@ -15,14 +15,14 @@ class Tank:
             self.iranyitas(sys.argv[0])
 
     def check_parameterek_szama(self):
-        if len(sys.argv) != 1:
+        if len(sys.argv) != 2:
             print "Csak egy parameter engedelyezett. Hasznalat: stop|elore|hatra|jobbra|balra"
             return False
         else:
             return True
 
     def check_is_engedelyezett_parancs(self):
-        if sys.argv[0] in self.engedelyezett_parancsok:
+        if sys.argv[1] in self.engedelyezett_parancsok:
             return True
         else:
             print "Nem engedelyezett parameter. Hasznalat: stop|elore|hatra|jobbra|balra"
