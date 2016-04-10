@@ -48,9 +48,9 @@ class Tank:
 
     def kimenetek_beallitasa(self):
         ##GPIO.setmode(GPIO.BOARD)  regi csomag itt meg nemkell
-        for nev, rele in self.relek:
-            GPIO.setup(rele, GPIO.OUT)
-            GPIO.output(rele, False)
+        for rele in self.relek:
+            GPIO.setup(self.relek[rele], GPIO.OUT)
+            GPIO.output(self.relek[rele], False)
 
 
 t = Tank()
