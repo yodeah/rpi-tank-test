@@ -6,7 +6,7 @@ import RPi.GPIO as GPIO
 class Tank:
 
     engedelyezett_parancsok = ["stop","elore","hatra","jobbra","balra"]
-    relek = {"jobb_elore": 10, "jobb_hatra": 11, "bal_elore": 10, "bal_elore": 10, }
+    relek = {"jobb_elore": 10, "jobb_hatra": 11, "bal_elore": 12, "bal_elore": 13, }
 
     def Execute(self):
         if self.check_parameterek_szama() and self.check_is_engedelyezett_parancs():
@@ -49,6 +49,7 @@ class Tank:
     def kimenetek_beallitasa(self):
         ##GPIO.setmode(GPIO.BOARD)  regi csomag itt meg nemkell
         for rele in self.relek:
+            print self.relek[rele] + " - " + rele
             GPIO.setup(self.relek[rele], GPIO.OUT)
             GPIO.output(self.relek[rele], False)
 
