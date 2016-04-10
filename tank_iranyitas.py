@@ -33,23 +33,19 @@ class Tank:
         self.kimenetek_beallitasa()
 
         if parameter == "stop":
-
+            return False
         elif parameter == "elore":
             GPIO.output(self.relek["jobb_elore"], True)
             GPIO.output(self.relek["bal_elore"], True)
-
         elif parameter == "hatra":
             GPIO.output(self.relek["jobb_hatra"], True)
             GPIO.output(self.relek["bal_hatra"], True)
-
         elif parameter == "jobbra":
             GPIO.output(self.relek["jobb_elore"], True)
             GPIO.output(self.relek["bal_hatra"], True)
-
         elif parameter == "balra":
             GPIO.output(self.relek["jobb_hatra"], True)
             GPIO.output(self.relek["bal_elore"], True)
-
 
 
     def kimenetek_beallitasa(self):
