@@ -37,20 +37,20 @@ class Tank:
             return False
         elif parameter == "elore":
             print "elore"
-            GPIO.output(self.relek["jobb_elore"], True)
-            GPIO.output(self.relek["bal_elore"], True)
+            GPIO.output(self.relek["jobb_elore"], False)
+            GPIO.output(self.relek["bal_elore"], False)
         elif parameter == "hatra":
             print "hatra"
-            GPIO.output(self.relek["jobb_hatra"], True)
-            GPIO.output(self.relek["bal_hatra"], True)
+            GPIO.output(self.relek["jobb_hatra"], False)
+            GPIO.output(self.relek["bal_hatra"], False)
         elif parameter == "jobbra":
             print "jobbra"
-            GPIO.output(self.relek["jobb_elore"], True)
-            GPIO.output(self.relek["bal_hatra"], True)
+            GPIO.output(self.relek["jobb_elore"], False)
+            GPIO.output(self.relek["bal_hatra"], False)
         elif parameter == "balra":
             print "balra"
-            GPIO.output(self.relek["jobb_hatra"], True)
-            GPIO.output(self.relek["bal_elore"], True)
+            GPIO.output(self.relek["jobb_hatra"], False)
+            GPIO.output(self.relek["bal_elore"], False)
 
 
     def kimenetek_beallitasa(self):
@@ -58,10 +58,10 @@ class Tank:
         for rele in self.relek:
             print str(self.relek[rele]) + " - " + str(rele)
             GPIO.setup(self.relek[rele], GPIO.OUT)
-            GPIO.output(self.relek[rele], False)
+            GPIO.output(self.relek[rele], True)
 
 
 t = Tank()
 t.Execute()
 
-time.sleep(100)
+#time.sleep(100)
