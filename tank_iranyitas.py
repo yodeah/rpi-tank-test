@@ -30,6 +30,8 @@ class Tank:
     def iranyitas(self, parameter):
         self.kimenetek_beallitasa()
 
+        print "parameter: " + parameter
+
         if parameter == "stop":
             return False
         elif parameter == "elore":
