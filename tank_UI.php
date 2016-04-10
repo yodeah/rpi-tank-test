@@ -32,16 +32,16 @@ and open the template in the editor.
 
 switch ($_POST['irany']) {
             case "elore":
-                var_dump("elore");
+                var_dump("IRANY: elore");
                 var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany']));
             case "balra":
-                var_dump("balra");
+                var_dump("IRANY: balra");
                 var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany']));
             case "jobbra":
-                var_dump("jobbra");
+                var_dump("IRANY: jobbra");
                 var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany']));
             case "hatra":
-                var_dump("hatra");
+                var_dump("IRANY: hatra");
                 var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany']));
 
             default:
