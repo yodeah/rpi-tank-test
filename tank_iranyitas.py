@@ -33,15 +33,19 @@ class Tank:
         if parameter == "stop":
             return False
         elif parameter == "elore":
+            print "elore"
             GPIO.output(self.relek["jobb_elore"], True)
             GPIO.output(self.relek["bal_elore"], True)
         elif parameter == "hatra":
+            print "hatra"
             GPIO.output(self.relek["jobb_hatra"], True)
             GPIO.output(self.relek["bal_hatra"], True)
         elif parameter == "jobbra":
+            print "jobbra"
             GPIO.output(self.relek["jobb_elore"], True)
             GPIO.output(self.relek["bal_hatra"], True)
         elif parameter == "balra":
+            print "balra"
             GPIO.output(self.relek["jobb_hatra"], True)
             GPIO.output(self.relek["bal_elore"], True)
 
