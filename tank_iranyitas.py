@@ -10,7 +10,7 @@ class Tank:
 
     def Execute(self):
         if self.check_parameterek_szama() and self.check_is_engedelyezett_parancs():
-            self.iranyitas(sys.argv[0])
+            self.iranyitas(sys.argv[1])
 
     def check_parameterek_szama(self):
         if len(sys.argv) != 2:
