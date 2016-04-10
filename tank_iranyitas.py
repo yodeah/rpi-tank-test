@@ -2,11 +2,12 @@
 
 import sys
 import RPi.GPIO as GPIO
+import time
 
 class Tank:
 
     engedelyezett_parancsok = ["stop","elore","hatra","jobbra","balra"]
-    relek = {"jobb_elore": 10, "jobb_hatra": 11, "bal_elore": 12, "bal_elore": 13, }
+    relek = {"jobb_elore": 10, "jobb_hatra": 11, "bal_elore": 13, "bal_elore": 12, }
 
     def Execute(self):
         if self.check_parameterek_szama() and self.check_is_engedelyezett_parancs():
@@ -62,3 +63,5 @@ class Tank:
 
 t = Tank()
 t.Execute()
+
+time.sleep(100)
