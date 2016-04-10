@@ -29,10 +29,11 @@ and open the template in the editor.
         </table>
         <?php
         error_reporting (E_ALL);
+        var_dump("IRANY: elore","parancs: sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . "2>&1");
 
-switch ($_POST['irany']) {
+        switch ($_POST['irany']) {
             case "elore":
-                var_dump("IRANY: elore");
+
                 var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . "2>&1"));
                 break;
             case "balra":
