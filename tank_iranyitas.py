@@ -16,7 +16,7 @@ class Tank:
 
     def check_parameterek_szama(self):
         if len(sys.argv) != 1:
-            print "Csak egy paraméter engedélyezett. Használat: stop|elore|hatra|jobbra|balra"
+            print "Csak egy parameter engedelyezett. Hasznalat: stop|elore|hatra|jobbra|balra"
             return False
         else:
             return True
@@ -25,7 +25,7 @@ class Tank:
         if sys.argv[0] in self.engedelyezett_parancsok:
             return True
         else:
-            print "Nem engedelyezett parameter. Használat: stop|elore|hatra|jobbra|balra"
+            print "Nem engedelyezett parameter. Hasznalat: stop|elore|hatra|jobbra|balra"
             return False
 
 
