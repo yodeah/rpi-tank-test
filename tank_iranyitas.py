@@ -7,7 +7,7 @@ import time
 class Tank:
 
     engedelyezett_parancsok = ["stop","elore","hatra","jobbra","balra"]
-    relek = {"jobb_elore": 10, "jobb_hatra": 11, "bal_elore": 13, "bal_elore": 12, }
+    relek = {"jobb_elore": 10, "jobb_hatra": 11, "bal_elore": 13, "bal_hatra": 12, }
 
     def Execute(self):
         if self.check_parameterek_szama() and self.check_is_engedelyezett_parancs():
@@ -64,4 +64,4 @@ class Tank:
 t = Tank()
 t.Execute()
 
-#time.sleep(100)
+time.sleep(100)
