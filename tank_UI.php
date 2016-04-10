@@ -27,6 +27,7 @@ and open the template in the editor.
                 <td></td>
             </tr>
         </table>
+        <pre>
         <?php
         error_reporting (E_ALL);
         var_dump("IRANY: elore","parancs: sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . "2>&1");
@@ -34,7 +35,7 @@ and open the template in the editor.
         switch ($_POST['irany']) {
             case "elore":
 
-                var_dump(shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . "2>&1"));
+                var_dump("SHELL EXEC KIMENET:".shell_exec ("sudo python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . "2>&1"));
                 break;
             case "balra":
                 var_dump("IRANY: balra");
@@ -53,5 +54,6 @@ and open the template in the editor.
                 break;
         }
         ?>
+    </pre>
     </body>
 </html>
