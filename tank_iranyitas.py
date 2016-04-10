@@ -3,8 +3,6 @@
 import sys
 import RPi.GPIO as GPIO
 
-
-
 class Tank:
 
     engedelyezett_parancsok = ["stop","elore","hatra","jobbra","balra"]
@@ -49,7 +47,7 @@ class Tank:
 
 
     def kimenetek_beallitasa(self):
-        GPIO.setmode(GPIO.BOARD)
+        ##GPIO.setmode(GPIO.BOARD)  regi csomag itt meg nemkell
         for nev, rele in self.relek:
             GPIO.setup(rele, GPIO.OUT)
             GPIO.output(rele, False)
