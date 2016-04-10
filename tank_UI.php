@@ -30,7 +30,7 @@ and open the template in the editor.
         <pre>
         <?php
         error_reporting (E_ALL);
-                var_dump("SHELL EXEC KIMENET:".shell_exec ("sudo -u pi -S python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . " < ~/.sudopass/sudopass.secret 2>&1"));
+                var_dump("SHELL EXEC KIMENET:".shell_exec ("sudo -u root -S python /home/pi/rpi-tank-test/tank_iranyitas.py " . $_POST['irany'] . " < ~/.sudopass/sudopass.secret 2>&1"));
 
         switch ($_POST['irany']) {
             case "elore":
