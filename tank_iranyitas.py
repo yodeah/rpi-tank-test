@@ -14,7 +14,7 @@ class Tank:
 
     def check_parameterek_szama(self):
         if len(sys.argv) != 2:
-            print "Csak egy parameter engedelyezett. Hasznalat: stop|elore|hatra|jobbra|balra"
+            print "Egy parameter kotlelezo. Hasznalat: stop|elore|hatra|jobbra|balra"
             return False
         else:
             return True
