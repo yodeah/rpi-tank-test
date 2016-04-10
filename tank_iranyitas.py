@@ -7,7 +7,7 @@ import time
 class Tank:
 
     engedelyezett_parancsok = ["stop","elore","hatra","jobbra","balra"]
-    relek = {"jobb_elore": 10, "jobb_hatra": 11, "bal_elore": 13, "bal_hatra": 12, }
+    relek = {"jobb_elore": 10, "jobb_hatra": 11, "bal_elore": 12, "bal_hatra": 13, }
 
     def Execute(self):
         if self.check_parameterek_szama() and self.check_is_engedelyezett_parancs():
@@ -37,6 +37,7 @@ class Tank:
             return False
         elif parameter == "elore":
             print "elore"
+
             GPIO.output(self.relek["jobb_elore"], False)
             GPIO.output(self.relek["bal_elore"], False)
         elif parameter == "hatra":
